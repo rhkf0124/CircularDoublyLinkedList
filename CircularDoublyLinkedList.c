@@ -1,6 +1,6 @@
 #include "CircularDoublyLinkedList.h"
 
-/* ¹®ÀÚ¿­ »ı¼º */
+/* ë¬¸ìì—´ ìƒì„± */
 char* createString(char* newString)
 {
     if (strlen(newString) == 0)
@@ -12,13 +12,13 @@ char* createString(char* newString)
     return _newString;
 }
 
-/* ¹®ÀÚ¿­ »èÁ¦ */
+/* ë¬¸ìì—´ ì‚­ì œ */
 void destroyString(char* string)
 {
     free(string);
 }
 
-/* ³ëµå »ı¼º */
+/* ë…¸ë“œ ìƒì„± */
 Node* createNode(elementType newData)
 {
     Node* newNode = (Node*)malloc(sizeof(Node));
@@ -32,19 +32,19 @@ Node* createNode(elementType newData)
     return newNode;
 }
 
-/* ³ëµå »èÁ¦ */
+/* ë…¸ë“œ ì‚­ì œ */
 void destroyNode(Node* node)
 {
     free(node);
 }
 
-/* ³ëµå¿¡¼­ ¹®ÀÚ¿­ ¾ò±â */
+/* ë…¸ë“œì—ì„œ ë¬¸ìì—´ ì–»ê¸° */
 char* getStringAsNode(Node* node)
 {
     return node->data;
 }
 
-/* ³ëµå Ãß°¡ */
+/* ë…¸ë“œ ì¶”ê°€ */
 int appendNode(Node** list, Node* newNode)
 {
     int index;
@@ -76,7 +76,7 @@ int appendNode(Node** list, Node* newNode)
     return index;
 }
 
-/* ³ëµå Á¦°Å */
+/* ë…¸ë“œ ì œê±° */
 int removeNode(Node** list, Node* node)
 {
     int index;
@@ -108,7 +108,7 @@ int removeNode(Node** list, Node* node)
     return index;
 }
 
-/* À§Ä¡ÀÇ ³ëµå Á¦°Å */
+/* ìœ„ì¹˜ì˜ ë…¸ë“œ ì œê±° */
 int removeNodeAt(Node** list, int location)
 {
     if (isEmpty(*list) || (getSize(*list) <= location))
@@ -122,7 +122,7 @@ int removeNodeAt(Node** list, int location)
     return index;
 }
 
-/* ³ëµå »ğÀÔ */
+/* ë…¸ë“œ ì‚½ì… */
 int insertNode(Node** list, Node* current, Node* newNode)
 {
     int index;
@@ -158,7 +158,7 @@ int insertNode(Node** list, Node* current, Node* newNode)
     return index;
 }
 
-/* »õ Çìµå »ğÀÔ */
+/* ìƒˆ í—¤ë“œ ì‚½ì… */
 int insertNewHead(Node** list, Node* newHead)
 {
     if (!isNoHasList(newHead))
@@ -185,7 +185,7 @@ int insertNewHead(Node** list, Node* newHead)
     return 0;
 }
 
-/* À§Ä¡¿¡ ³ëµå »ğÀÔ */
+/* ìœ„ì¹˜ì— ë…¸ë“œ ì‚½ì… */
 int insertNodeAt(Node** list, int location, Node* newNode)
 {
     if (isEmpty(*list) || (!isNoHasList(newNode)))
@@ -199,7 +199,7 @@ int insertNodeAt(Node** list, int location, Node* newNode)
     return index;
 }
 
-/* ³ëµå ¾Õ¿¡ »ğÀÔ */
+/* ë…¸ë“œ ì•ì— ì‚½ì… */
 int insertNodeAfter(Node** list, Node* current, Node* newNode)
 {
     int index;
@@ -236,7 +236,7 @@ int insertNodeAfter(Node** list, Node* current, Node* newNode)
     return index;
 }
 
-/* À§Ä¡¿¡ ³ëµå ¾Õ¿¡ »ğÀÔ */
+/* ìœ„ì¹˜ì— ë…¸ë“œ ì•ì— ì‚½ì… */
 int insertNodeAfterAt(Node** list, int location, Node* newNode)
 {
     if (isEmpty(*list) || (!isNoHasList(newNode)))
@@ -250,7 +250,7 @@ int insertNodeAfterAt(Node** list, int location, Node* newNode)
     return index;
 }
 
-/* ³ëµå ¾ò±â */
+/* ë…¸ë“œ ì–»ê¸° */
 Node* getNodeAt(Node* list, int location)
 {
     if (isEmpty(list))
@@ -269,7 +269,7 @@ Node* getNodeAt(Node* list, int location)
     return current;
 }
 
-/* ºñ¾îÀÖ´ÂÁö È®ÀÎ */
+/* ë¹„ì–´ìˆëŠ”ì§€ í™•ì¸ */
 int isEmpty(Node* list)
 {
     if (getSize(list) == 0)
@@ -278,7 +278,7 @@ int isEmpty(Node* list)
         return 0;
 }
 
-/* ¸®½ºÆ® Å©±â È®ÀÎ */
+/* ë¦¬ìŠ¤íŠ¸ í¬ê¸° í™•ì¸ */
 int getSize(Node* list)
 {
     if (list == NULL)
@@ -297,7 +297,7 @@ int getSize(Node* list)
     return size;
 }
 
-/* ¸®½ºÆ® »èÁ¦ */
+/* ë¦¬ìŠ¤íŠ¸ ì‚­ì œ */
 int destroyList(Node** list)
 {
     if (isEmpty(*list))
@@ -314,7 +314,7 @@ int destroyList(Node** list)
     return 0;
 }
 
-/* ¹®ÀÚ¿­ ¸®½ºÆ® »èÁ¦ */
+/* ë¬¸ìì—´ ë¦¬ìŠ¤íŠ¸ ì‚­ì œ */
 int destroyListAndStrings(Node** list)
 {
     if (isEmpty(*list))
@@ -333,7 +333,7 @@ int destroyListAndStrings(Node** list)
     return 0;
 }
 
-/* ³ëµå°¡ ¸®½ºÆ®¿¡ Æ÷ÇÔµÇ¾î ÀÖÁö ¾ÊÀºÁö È®ÀÎ */
+/* ë…¸ë“œê°€ ë¦¬ìŠ¤íŠ¸ì— í¬í•¨ë˜ì–´ ìˆì§€ ì•Šì€ì§€ í™•ì¸ */
 int isNoHasList(Node* node)
 {
     if (node == NULL)
@@ -345,7 +345,7 @@ int isNoHasList(Node* node)
         return 1;
 }
 
-/* ¸®½ºÆ®¿¡ ³ëµå°¡ ÀÖ´ÂÁö È®ÀÎ */
+/* ë¦¬ìŠ¤íŠ¸ì— ë…¸ë“œê°€ ìˆëŠ”ì§€ í™•ì¸ */
 int currentNode(Node* list, Node* node)
 {
     if (isEmpty(list) || isNoHasList(node))
@@ -364,7 +364,7 @@ int currentNode(Node* list, Node* node)
     return 0;
 }
 
-/* ÀÎµ¦½º ¾ò±â */
+/* ì¸ë±ìŠ¤ ì–»ê¸° */
 int getIndex(Node* list, Node* node)
 {
     if (isEmpty(list) || isNoHasList(node) || (!currentNode(list, node)))
