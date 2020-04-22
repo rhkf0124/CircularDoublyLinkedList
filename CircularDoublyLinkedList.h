@@ -15,7 +15,7 @@ typedef struct tagNode {
     struct tagNode* nextNode;
 } Node;
 
-/* ÇÔ¼ö ¿øÇü ¼±¾ð */
+/* Ã‡Ã”Â¼Ã¶ Â¿Ã¸Ã‡Ã¼ Â¼Â±Â¾Ã° */
 char* createString(char* newString);
 void destroyString(char* string);
 Node* createNode(elementType newData);
